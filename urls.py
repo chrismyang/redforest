@@ -5,8 +5,7 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^redforest/', include('redforest.foo.urls')),
+    (r'^login/$', 'telperion.views.login'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
