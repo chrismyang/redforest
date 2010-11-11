@@ -4,22 +4,50 @@
 {% csrf_token %}
 <fieldset>
 <p>Existing Users</p>
-Username: <input type="text" name="username" /><br />
-Password: <input type="password" name="password" /><br/>
+<table border="1">
+<tr>
+<td>Username:</td>
+<td><input type="text" name="username" /></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" /></td>
+</tr>
+</table>
 <input type="button" value="Login">
 </fieldset>
 
+</form>
+
+<form action="">
+
 <fieldset>
 <p>New Users</p>
-Name: <input type="text" name="name" /><br />
-Username: <input type="text" name="username" /><br />
-Password: <input type="password" name="password" /><br/>
-Confirm Password: <input type="password" name="confirm_password" /><br/>
-Email: <input type="text" name="email" /><br />
+<table border="1">
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" /></td>
+</tr>
+<tr>
+<td>Username:</td>
+<td><input type="text" name="username" /></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" /></td>
+</tr>
+<tr>
+<td>Confirm Password: </td>
+<td><input type="password" name="confirm_password" /></td>
+</tr>
+<tr>
+<td>Email: </td>
+<td><input type="text" name="email" /></td>
+</tr>
+</table>
 <input type="button" value="Register">
 </fieldset>
 
 </form>
 </body>
 </html>
-
