@@ -8,10 +8,12 @@ def loginpage(request):
     return render_to_response('Login.html', {}, context_instance=RequestContext(request))
 
 def login(request):
-    u = get_object_or_404(User, username=request.POST['username'])
-    if u.password == request.POST['password']:
-        request.session['uid'] = u.id
-        return HttpResponse("Successfully Logged In")
-    else:
+    try:
+        u = User.objects.get(username=request.POST['username'])
+        if u.password == request.POST['password']:
+            request.session['uid'] = u.id
+            return HttpResponse("Successfully Logged In")
+        else:
+            return render_to_response('Login.html', {'login': 0}, context_instance=RequestContext(request))
+    except User.DoesNotExist:
         return render_to_response('Login.html', {'login': 0}, context_instance=RequestContext(request))
-
