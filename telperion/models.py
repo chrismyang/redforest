@@ -1,5 +1,11 @@
 from django.db import models
 
+class School(models.Model):
+    schoolname = models.CharField(max_length=100)
+
+
+
+
 # Create your models here.
 class User(models.Model):
     username = models.CharField(max_length=50)
@@ -7,9 +13,11 @@ class User(models.Model):
     email = models.CharField(max_length=50)
     schools = models.ManyToManyField(School)
 
-class School(models.Model):
-    schoolname = models.CharField(max_length=100)
 
+
+class Question(models.Model):
+    questiontext = models.CharField(max_length=200)
+    school = models.ForeignKey(School)
 
 class Essay(models.Model):
     question = models.ForeignKey(Question)
@@ -17,6 +25,3 @@ class Essay(models.Model):
     user = models.ForeignKey(User)
 
 
-class Question(models.Model):
-    questiontext = models.CharField(max_length=200)
-    school = models.ForeignKey(School)
