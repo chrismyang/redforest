@@ -77,7 +77,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'redforest.urls'
 
-TEMPLATE_DIRS = ('/Users/chris/Documents/redforest/redforest/redforest/templates',)
+TEMPLATE_DIRS = ('templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
