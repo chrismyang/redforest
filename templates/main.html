@@ -3,10 +3,9 @@
 
 {% for college in college_list %}
 
-<h1><a href="default.asp">college_name</a><input type="button" value="Delete"></h1>
-
+<h1><a href="default.asp"> {{ college }} </a><input type="button" value="Delete"></h1>
 {% for question in question_list %}
-  <li>{% question %}</li>
+<li>{{ question }}</li>
 
 {% endfor %}
 {% endfor %}
