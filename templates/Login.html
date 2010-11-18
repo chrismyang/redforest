@@ -1,8 +1,11 @@
 <html>
 <body>
-<form action="">
+<form action="/login/go" method="post">
 {% csrf_token %}
 <fieldset>
+{%  if login == 0 %}
+    <b>Login Failed! Incorrect Username or Password</b><br>
+{% endif %}
 <p>Existing Users</p>
 <table border="1">
 <tr>
@@ -14,7 +17,7 @@
 <td><input type="password" name="password" /></td>
 </tr>
 </table>
-<input type="button" value="Login">
+<input type="submit" value="Login">
 </fieldset>
 
 </form>

@@ -1,0 +1,19 @@
+<html>
+<body>
+
+{% for college in college_list %}
+
+<h1><a href="default.asp"> {{ college }} </a><input type="button" value="Delete"></h1>
+{% for question in question_list %}
+<li>{{ question }}</li>
+
+{% endfor %}
+{% endfor %}
+
+<form name="input" action="html_form_action.asp" method="get">
+New College <input type="text" name="College" value="Insert College" /><br />
+<input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

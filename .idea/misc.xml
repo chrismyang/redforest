@@ -6,6 +6,10 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.6.1 (/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6)" project-jdk-type="Python SDK" />
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7 (C:/Python27/python.exe)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.6.5 (/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6)" project-jdk-type="Python SDK" />
+>>>>>>> 75ec7ebbab3e1f34276fc2b018212ea132e18059
 </project>
 
