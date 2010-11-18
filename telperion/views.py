@@ -27,4 +27,4 @@ def create_user(request):
     return HttpResponse('You made a new username. DOOP!')
 
 def questionanswer(request):
-    return reder_to_response('question_answer.html', {}, context_instance=RequestContext(request)))
+    return render_to_response('question_answer.html', {}, context_instance=RequestContext(request))
