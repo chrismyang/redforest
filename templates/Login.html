@@ -22,33 +22,22 @@
 
 </form>
 
-<form action="">
+<form action="/login/new_user" method="post">
+{% csrf_token %}
 
 <fieldset>
 <p>New Users</p>
 <table border="1">
 <tr>
-<td>Name:</td>
-<td><input type="text" name="name" /></td>
-</tr>
-<tr>
 <td>Username:</td>
-<td><input type="text" name="username" /></td>
+<td><input type="text" name="username_new" /></td>
 </tr>
 <tr>
 <td>Password: </td>
-<td><input type="password" name="password" /></td>
-</tr>
-<tr>
-<td>Confirm Password: </td>
-<td><input type="password" name="confirm_password" /></td>
-</tr>
-<tr>
-<td>Email: </td>
-<td><input type="text" name="email" /></td>
+<td><input type="password" name="password_new" /></td>
 </tr>
 </table>
-<input type="button" value="Register">
+<input type="submit" value="Register">
 </fieldset>
 
 </form>

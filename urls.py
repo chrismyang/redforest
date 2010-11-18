@@ -7,7 +7,7 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
     (r'^login/$', 'telperion.views.loginpage'),
     (r'^login/go$', 'telperion.views.login'),
-    (r'^main$', 'telperion.views.mainpage'),
+    (r'^login/new_user$', 'telperion.views.create_user')
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
