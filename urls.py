@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     (r'^login/$', 'telperion.views.loginpage'),
     (r'^login/go$', 'telperion.views.login'),
     (r'^login/new_user$', 'telperion.views.create_user')
+    (r'^question/$', 'telperion.views.questionanswer')
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
