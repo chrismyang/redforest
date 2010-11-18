@@ -1,7 +1,8 @@
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 from django.template import RequestContext
-from telperion.models import User
-from django.http import HttpResponse,HttpResponseRedirect
+from django.contrib.auth.models import User
+from django.http import HttpResponse
+
 
 
 def loginpage(request):
@@ -10,7 +11,7 @@ def loginpage(request):
 def login(request):
     try:
         u = User.objects.get(username=request.POST['username'])
-        if u.password == request.POST['password']:
+        if u.check_password(request.POST['password']):
             request.session['uid'] = u.id
             return HttpResponse("Successfully Logged In")
         else:
