@@ -18,3 +18,10 @@ def login(request):
             return render_to_response('Login.html', {'login': 0}, context_instance=RequestContext(request))
     except User.DoesNotExist:
         return render_to_response('Login.html', {'login': 0}, context_instance=RequestContext(request))
+
+def create_user(request):
+    u = User(username=request.POST['username_new'])
+    u.set_password(request.POST['password_new'])
+    u.save()
+    request.session['uid'] = u.id
+    return HttpResponse('You made a new username. DOOP!')
