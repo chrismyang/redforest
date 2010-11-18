@@ -13,7 +13,7 @@ class User(models.Model):
 
 
 class Question(models.Model):
-    questiontext = models.CharField(max_length=200)
+    questiontext = models.CharField(max_length=400)
     school = models.ForeignKey(School)
 
 class Essay(models.Model):
