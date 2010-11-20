@@ -28,3 +28,6 @@ def create_user(request):
     completeuser.save()
     request.session['uid'] = u.id
     return HttpResponse('You made a new username. DOOP!')
+
+def questionanswer(request):
+    return render_to_response('question_answer.html', {}, context_instance=RequestContext(request))
