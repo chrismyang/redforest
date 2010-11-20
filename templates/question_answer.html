@@ -2,7 +2,8 @@
 Question:
 <form>
 Answer:
-    <input type="text" name="firstname"/>
+    <textarea onkeypress="document.getElementById('characterCount').innerHTML = this.innerHTML.length.toString()" name="question"></textarea>
+        <p id="characterCount"></p>
 </form>
 <input type="submit" value="Save">
 </html>
