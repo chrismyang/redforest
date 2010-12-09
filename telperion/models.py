@@ -12,6 +12,7 @@ class User(models.Model):
     schools = models.ManyToManyField(School)
 
 
+
 class Question(models.Model):
     questiontext = models.CharField(max_length=400)
     school = models.ForeignKey(School)

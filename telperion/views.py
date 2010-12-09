@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth.models import User
+from telperion.models import User
+from django.contrib.auth.models import User as OldUser
 from django.http import HttpResponse
 
 
@@ -10,7 +11,7 @@ def loginpage(request):
 
 def login(request):
     try:
-        u = User.objects.get(username=request.POST['username'])
+        u = OldUser.objects.get(username=request.POST['username'])
         if u.check_password(request.POST['password']):
             request.session['uid'] = u.id
             return HttpResponse("Successfully Logged In")
@@ -20,9 +21,11 @@ def login(request):
         return render_to_response('Login.html', {'login': 0}, context_instance=RequestContext(request))
 
 def create_user(request):
-    u = User(username=request.POST['username_new'])
+    u = OldUser(username=request.POST['username_new'])
     u.set_password(request.POST['password_new'])
     u.save()
+    completeuser = User(user=u)
+    completeuser.save()
     request.session['uid'] = u.id
     return HttpResponse('You made a new username. DOOP!')
 
