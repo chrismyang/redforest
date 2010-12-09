@@ -4,6 +4,8 @@ from django.contrib.auth.models import User as OriginalUser
 
 class School(models.Model):
     schoolname = models.CharField(max_length=100)
+    def __unicode__(self):
+        return self.schoolname
 
 
 
